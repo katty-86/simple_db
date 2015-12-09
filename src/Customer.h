@@ -12,7 +12,8 @@
 #define SRC_CUSTOMER_H_
 
 class Customer {
-	long id;
+	int id;
+	static int quantity;
 	std::string name;
 	std::string surname;
 	int age;

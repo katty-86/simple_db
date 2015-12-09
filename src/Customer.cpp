@@ -9,12 +9,14 @@
 
 #include <ctime>
 
+int Customer::quantity=0;
+
 Customer::Customer() :
-		id(time(0)), name("test"), surname(""), age(0), purchase_amount(0.0) {
+		id(quantity++), name("test"), surname(""), age(0), purchase_amount(0.0) {
 }
 
 Customer::Customer( std::string n, std::string s, int a, float p) :
-		id(time(0)), name(n), surname(s), age(a), purchase_amount(p) {
+		id(quantity++), name(n), surname(s), age(a), purchase_amount(p) {
 }
 
 Customer::~Customer() {
