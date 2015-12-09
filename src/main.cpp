@@ -1,5 +1,5 @@
 #include <iostream>
-#include <memory>
+/*#include <memory>
 
 #include "../include/Customer.h"
 #include "../include/Simpledb.h"
@@ -31,8 +31,8 @@ cout<<"reading"<<endl;
 	shared_ptr<Customer> bs11 =make_shared <Customer> (3,"imie2", "nazwisko2", 1, 1.0);
 	cout<<"ilosc "<<sim_db1.db_select_count(*bs11)<<endl;
 	cout<<"imie "<<sim_db1.db_select_count_if("imie1", "name")<<endl;
-	cout<<"nazwisko "<<sim_db1.db_select_count_if("nazwisko1", "surname")<<endl;
+	cout<<"nazwisko "<<sim_db1.db_select_count_if(1.0 )<<endl;
 	cout<<sim_db1<<endl;
 	cout << "cleaning"<<endl;
 	return 0;
-}
+}*/

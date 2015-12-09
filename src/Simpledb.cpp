@@ -55,27 +55,28 @@ void SimpleDB::setDatabase(std::list<Customer> &v) {
 }
 
 int SimpleDB::db_select_count_if(std::string n, std::string type) {
-
-	if(type=="name"){
-		return std::count_if(this->database.begin(), this->database.end(),[&n](const Customer &c){return c.getName()==n ;});
-	}
-	else if (type=="surname"){
-		return std::count_if(this->database.begin(), this->database.end(),[&n](const Customer &c){return c.getSurname()==n ;});
-	}
-	else{
+	if (type == "name") {
+		return std::count_if(this->database.begin(), this->database.end(),
+				[&n](const Customer &c) {return c.getName()==n;});
+	} else if (type == "surname") {
+		return std::count_if(this->database.begin(), this->database.end(),
+				[&n](const Customer &c) {return c.getSurname()==n;});
+	} else {
 		return -1;
 	}
 }
 
-int SimpleDB::db_select_count_if(int n, std::string type) {
+int SimpleDB::db_select_count_if(int n) {
 
-	return std::count_if(this->database.begin(), this->database.end(),[&n](const Customer &c){return c.getAge()==n ;});
+	return std::count_if(this->database.begin(), this->database.end(),
+			[&n](const Customer &c) {return c.getAge()==n;});
 
 }
 
-int SimpleDB::db_select_count_if(float n, std::string type) {
+int SimpleDB::db_select_count_if(float n ) {
 
-	return std::count_if(this->database.begin(), this->database.end(),[&n](const Customer &c){return c.getPurchase_amount()()==n ;});
+	return std::count_if(this->database.begin(), this->database.end(),
+			[&n](const Customer &c) {return c.getPurchase_amount()==n;});
 
 }
 
